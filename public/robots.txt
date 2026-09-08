@@ -1,0 +1,5 @@
+# Robots.txt for Aneka Kue Rahayu
+User-agent: *
+Allow: /
+
+Sitemap: https://e-commerce-rahayu.vercel.app/sitemap.xml
