@@ -18,13 +18,27 @@ export default function CartDrawer() {
   } = useCart();
 
   const [customerName, setCustomerName] = useState('');
+  const [deliveryType, setDeliveryType] = useState('delivery'); // 'delivery' | 'pickup'
   const [customerAddress, setCustomerAddress] = useState('');
   const [customerNotes, setCustomerNotes] = useState('');
+  const [nameError, setNameError] = useState(false);
 
   if (!isCartOpen) return null;
 
   const handleCheckoutWhatsApp = () => {
     if (itemsList.length === 0) return;
+
+    // Validate Required Customer Name
+    if (!customerName.trim()) {
+      setNameError(true);
+      const nameInput = document.getElementById('customer-name-input');
+      if (nameInput) {
+        nameInput.focus();
+        nameInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      return;
+    }
+    setNameError(false);
 
     let itemsText = itemsList
       .map((item, idx) => {
@@ -40,18 +54,19 @@ export default function CartDrawer() {
     }
 
     message += `\n*Total Pembayaran: Rp ${finalPrice.toLocaleString('id-ID')}*`;
+    message += `\n\n--------------------------------`;
+    message += `\n*Data Pemesan:*`;
+    message += `\nNama: ${customerName.trim()}`;
+    message += `\nMetode: ${deliveryType === 'delivery' ? 'Kirim ke Alamat (Ekspedisi/Kurir)' : 'Ambil Langsung di Dapur (Blok Parenca, Ciawigajah)'}`;
 
-    if (customerName.trim()) {
-      message += `\n\nNama Pemesan: ${customerName.trim()}`;
-    }
-    if (customerAddress.trim()) {
-      message += `\nAlamat Kirim: ${customerAddress.trim()}`;
+    if (deliveryType === 'delivery' && customerAddress.trim()) {
+      message += `\nAlamat: ${customerAddress.trim()}`;
     }
     if (customerNotes.trim()) {
       message += `\nCatatan: ${customerNotes.trim()}`;
     }
 
-    message += `\n\nMohon konfirmasi pesanan dan total ongkos kirimnya ya admin, terima kasih!`;
+    message += `\n\nMohon konfirmasi pesanan dan ketersediaannya ya admin, terima kasih!`;
 
     const waUrl = `https://wa.me/6283873688118?text=${encodeURIComponent(message)}`;
     window.open(waUrl, '_blank', 'noopener,noreferrer');
@@ -240,47 +255,108 @@ export default function CartDrawer() {
                 </button>
               </div>
 
-              {/* Customer Info Form (Optional for direct WA draft) */}
+              {/* Customer Info Form */}
               <div className="pt-2 border-t border-[#faf2ee] space-y-3">
                 <h3 className="text-xs font-bold text-[#5a4138] uppercase tracking-wider">
-                  Informasi Tambahan (Opsional)
+                  Data Pemesan &amp; Pengiriman
                 </h3>
 
+                {/* Nama Pemesan (WAJIB) */}
                 <div>
-                  <label className="block text-xs font-semibold text-[#1e1b19] mb-1">
-                    Nama Pemesan
-                  </label>
+                  <div className="flex items-center justify-between mb-1">
+                    <label className="text-xs font-semibold text-[#1e1b19]">
+                      Nama Pemesan <strong className="text-[#ba1a1a]">*</strong>
+                    </label>
+                    {nameError && (
+                      <span className="text-[10px] text-[#ba1a1a] font-bold">
+                        Wajib diisi ya
+                      </span>
+                    )}
+                  </div>
                   <input
+                    id="customer-name-input"
                     type="text"
                     value={customerName}
-                    onChange={(e) => setCustomerName(e.target.value)}
-                    placeholder="Contoh: Ibu Rina"
-                    className="w-full text-xs px-3 py-2 rounded-lg border border-[#eee7e3] bg-white focus:outline-none focus:border-[#a33900]"
+                    onChange={(e) => {
+                      setCustomerName(e.target.value);
+                      if (e.target.value.trim()) setNameError(false);
+                    }}
+                    placeholder="Contoh: Ibu Rina / Mas Bayu"
+                    className={`w-full text-xs px-3 py-2.5 rounded-lg border bg-white focus:outline-none transition-colors ${
+                      nameError
+                        ? 'border-[#ba1a1a] focus:border-[#ba1a1a] bg-red-50/40'
+                        : 'border-[#eee7e3] focus:border-[#a33900]'
+                    }`}
                   />
                 </div>
 
+                {/* Metode Penyerahan: Dikirim vs Ambil di Tempat */}
                 <div>
-                  <label className="block text-xs font-semibold text-[#1e1b19] mb-1">
-                    Alamat Pengiriman
+                  <label className="block text-xs font-semibold text-[#1e1b19] mb-1.5">
+                    Metode Penyerahan Pesanan
                   </label>
-                  <input
-                    type="text"
-                    value={customerAddress}
-                    onChange={(e) => setCustomerAddress(e.target.value)}
-                    placeholder="Contoh: Jl. Fatmawati No. 12, Jaksel"
-                    className="w-full text-xs px-3 py-2 rounded-lg border border-[#eee7e3] bg-white focus:outline-none focus:border-[#a33900]"
-                  />
+                  <div className="grid grid-cols-2 gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setDeliveryType('delivery')}
+                      className={`flex items-center justify-center gap-1.5 p-2 rounded-xl border text-xs font-bold transition-all cursor-pointer ${
+                        deliveryType === 'delivery'
+                          ? 'bg-[#a33900] text-white border-[#a33900] shadow-xs'
+                          : 'bg-white text-[#5a4138] border-[#eee7e3] hover:bg-[#faf2ee]'
+                      }`}
+                    >
+                      <span className="material-symbols-outlined text-[16px]">local_shipping</span>
+                      <span>Kirim ke Alamat</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => setDeliveryType('pickup')}
+                      className={`flex items-center justify-center gap-1.5 p-2 rounded-xl border text-xs font-bold transition-all cursor-pointer ${
+                        deliveryType === 'pickup'
+                          ? 'bg-[#a33900] text-white border-[#a33900] shadow-xs'
+                          : 'bg-white text-[#5a4138] border-[#eee7e3] hover:bg-[#faf2ee]'
+                      }`}
+                    >
+                      <span className="material-symbols-outlined text-[16px]">storefront</span>
+                      <span>Ambil di Dapur</span>
+                    </button>
+                  </div>
                 </div>
 
+                {/* Alamat Pengiriman (Muncul jika pilih Dikirim) */}
+                {deliveryType === 'delivery' ? (
+                  <div className="animate-in fade-in duration-200">
+                    <label className="block text-xs font-semibold text-[#1e1b19] mb-1">
+                      Alamat Pengiriman (Opsional / Kota Tujuan)
+                    </label>
+                    <textarea
+                      rows="2"
+                      value={customerAddress}
+                      onChange={(e) => setCustomerAddress(e.target.value)}
+                      placeholder="Contoh: Jl. Diponegoro No. 25, Cirebon / Jakarta Selatan"
+                      className="w-full text-xs px-3 py-2 rounded-lg border border-[#eee7e3] bg-white focus:outline-none focus:border-[#a33900]"
+                    />
+                  </div>
+                ) : (
+                  <div className="p-3 rounded-xl bg-[#ffdf9f]/20 border border-[#ffdf9f]/60 text-xs text-[#795900] flex items-start gap-2 animate-in fade-in duration-200">
+                    <span className="material-symbols-outlined text-[18px] shrink-0 text-[#a33900]">location_on</span>
+                    <p className="text-[11px] leading-relaxed">
+                      <strong>Lokasi Dapur:</strong> Blok Parenca, Desa Ciawigajah, Beber, Cirebon (Konfirmasi jadwal pengambilan via WA admin).
+                    </p>
+                  </div>
+                )}
+
+                {/* Catatan Khusus */}
                 <div>
                   <label className="block text-xs font-semibold text-[#1e1b19] mb-1">
-                    Catatan Khusus
+                    Catatan Khusus (Opsional)
                   </label>
                   <input
                     type="text"
                     value={customerNotes}
                     onChange={(e) => setCustomerNotes(e.target.value)}
-                    placeholder="Contoh: Kirim sebelum pkl 12 siang ya"
+                    placeholder="Contoh: Packing kardus ya / Kirim pagi"
                     className="w-full text-xs px-3 py-2 rounded-lg border border-[#eee7e3] bg-white focus:outline-none focus:border-[#a33900]"
                   />
                 </div>
