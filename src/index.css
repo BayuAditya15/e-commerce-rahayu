@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  
+  --color-primary: #a33900;
+  --color-primary-container: #cc4900;
+  --color-primary-fixed: #ffdbce;
+  --color-primary-fixed-dim: #ffb599;
+  --color-on-primary: #ffffff;
+  --color-on-primary-fixed: #370e00;
+
+  --color-secondary: #795900;
+  --color-secondary-container: #ffc329;
+  --color-secondary-fixed: #ffdf9f;
+  --color-secondary-fixed-dim: #f9bd22;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-fixed: #261a00;
+
+  --color-tertiary: #984225;
+  --color-tertiary-container: #b7593b;
+  --color-tertiary-fixed: #ffdbd0;
+  --color-tertiary-fixed-dim: #ffb59e;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-fixed: #3a0b00;
+
+  --color-surface: #fff8f5;
+  --color-surface-dim: #e0d8d5;
+  --color-surface-bright: #fff8f5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #faf2ee;
+  --color-surface-container: #f4ece8;
+  --color-surface-container-high: #eee7e3;
+  --color-surface-container-highest: #e9e1dd;
+
+  --color-on-surface: #1e1b19;
+  --color-on-surface-variant: #5a4138;
+  --color-outline: #8e7166;
+  --color-outline-variant: #e2bfb2;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Ultra Smooth Apple-style Scroll Reveal Transition */
+.reveal-smooth {
+  transition-property: opacity, transform;
+  transition-duration: 850ms;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-sans);
+}
+
+/* Material symbols outlined alignment */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.material-symbols-outlined.fill {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Smooth Keyframe Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.03);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.08);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #e2bfb2;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8e7166;
+}
