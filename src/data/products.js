@@ -4,7 +4,7 @@ export const productsData = [
     name: "Kremes Ubi Karamel",
     shortName: "Kremes Ubi",
     category: "manis",
-    description: "Ubi manis pilihan berbalut gula karamel renyah keemasan khas racikan rumah, renyah manis legit tidak alot.",
+    description: "Olahan ubi jalar manis berbalut gula karamel renyah, rasa manisnya pas dan garing kriuk tidak alot.",
     popularity: 98,
     image: "/images/products/kremes-ubi.jpg",
     variants: [
@@ -17,7 +17,7 @@ export const productsData = [
     name: "Sistik Wijen Renyah",
     shortName: "Sistik Wijen",
     category: "gurih",
-    description: "Stik keju renyah aroma wijen sangrai wangi, gurih nagih tanpa rasa amis, tekstur empuk kriuk tidak keras.",
+    description: "Stik renyah bertabur wijen wangi, gurih renyah tanpa rasa amis, tekstur empuk kriuk tidak keras.",
     popularity: 99,
     image: "/images/products/sistik-wijen.jpg",
     variants: [
@@ -31,7 +31,7 @@ export const productsData = [
     name: "Sistik Kuning Bawang Klasik",
     shortName: "Sistik Kuning",
     category: "gurih",
-    description: "Camilan sistik renyah rasa bawang gurih asin pas, cocok buat teman santai, ngeteh pagi, dan suguhan tamu.",
+    description: "Sistik renyah rasa bawang gurih asin pas, cocok untuk teman santai, ngeteh, dan suguhan tamu.",
     popularity: 92,
     image: "/images/products/sistik-kuning.jpg",
     variants: [
@@ -45,7 +45,7 @@ export const productsData = [
     name: "Keripik Ubi Ungu Crispy",
     shortName: "Keripik Ubi Ungu",
     category: "manis",
-    description: "Irisan ubi ungu renyah tipis manis alami tanpa pemanis buatan, kaya serat dan garing saat digigit.",
+    description: "Irisan ubi ungu pilihan yang digoreng tipis dan renyah dengan rasa manis alami ubi tanpa pemanis buatan.",
     popularity: 88,
     image: "/images/products/keripik-ubi-ungu.jpg",
     variants: [
@@ -59,7 +59,7 @@ export const productsData = [
     name: "Makaroni Pedas Daun Jeruk",
     shortName: "Makaroni Pedas",
     category: "pedas",
-    description: "Makaroni spiral renyah dibalut bumbu cabai asli dan daun jeruk segar gurih pedas, renyah kriuk tidak bikin sakit gigi.",
+    description: "Makaroni spiral renyah dibumbui cabai dan aroma daun jeruk segar, rasa pedas gurihnya pas dan tidak keras.",
     popularity: 96,
     image: "/images/products/makaroni-pedas.jpg",
     variants: [
@@ -73,7 +73,7 @@ export const productsData = [
     name: "Seblak Kering Campur Bantet",
     shortName: "Seblak Kering Campur",
     category: "pedas",
-    description: "Kerupuk seblak bantet aneka bentuk renyah wangi kencur asli & cabai rawit pedas nikmat, gurih mantap renyah.",
+    description: "Kerupuk seblak bantet aneka bentuk renyah dengan bumbu kencur dan cabai gurih nikmat, renyah dan kriuk.",
     popularity: 90,
     image: "/images/products/seblak-kering.jpg",
     variants: [
@@ -87,7 +87,7 @@ export const productsData = [
     name: "Basreng Bakso Goreng Daun Jeruk",
     shortName: "Basreng Pedas / Ori",
     category: "pedas",
-    description: "Bakso ikan goreng renyah kriuk dengan taburan bumbu cabai daun jeruk gurih melimpah, tidak keras sama sekali.",
+    description: "Bakso goreng renyah aroma daun jeruk gurih, tekstur garing kriuk dan tidak keras saat digigit.",
     popularity: 97,
     image: "/images/products/basreng.jpg",
     variants: [

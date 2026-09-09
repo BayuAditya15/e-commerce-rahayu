@@ -6,19 +6,19 @@ export default function Story() {
 
   const pillars = [
     {
-      icon: "menu_book",
-      title: "Resep Asli Warisan",
-      desc: "Dirajut dari resep olahan ubi dan camilan keluarga tanpa bahan pemanis buatan atau pengawet kimiawi."
+      icon: "spa",
+      title: "Bahan Ubi Jalar Pilihan",
+      desc: "Menggunakan ubi jalar segar dan bahan sederhana tanpa pemanis buatan maupun bahan pengawet."
     },
     {
       icon: "oil_barrel",
-      title: "Minyak Pilihan 1x Pakai",
-      desc: "Hanya memakai minyak nabati kemasan bermerk yang rutin diganti fresh setiap batch demi kerenyahan sehat."
+      title: "Minyak Nabati Bersih",
+      desc: "Digoreng dengan minyak nabati berkualitas yang rutin diganti agar hasil gorengan renyah, bersih, dan tidak tengik."
     },
     {
-      icon: "wb_twilight",
-      title: "Digoreng Fresh Subuh Hari",
-      desc: "Setiap bungkus camilan diproduksi di pagi hari agar cita rasa gurih dan kriuknya sampai maksimal di tangan Anda."
+      icon: "alarm_on",
+      title: "Produksi Segar Berkala",
+      desc: "Diproduksi secara berkala agar camilan yang dikirim ke Anda selalu baru dan tetap renyah saat dinikmati."
     }
   ];
 
@@ -39,15 +39,15 @@ export default function Story() {
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                 <img
                   src="/images/products/kitchen.jpg"
-                  alt="Dapur Aneka Kue Rahayu - Warisan Rasa Tradisional"
+                  alt="Dapur Aneka Kue Rahayu - Olahan Ubi Jalar & Camilan Renyah"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                 
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <p className="text-sm font-bold drop-shadow">Dapur Warisan Rahayu</p>
-                  <p className="text-xs text-white/90 drop-shadow">Tradisi rasa rumahan otentik sejak hari pertama</p>
+                  <p className="text-sm font-bold drop-shadow">Aneka Kue Rahayu</p>
+                  <p className="text-xs text-white/90 drop-shadow">Usaha rumahan olahan ubi jalar dan aneka camilan renyah</p>
                 </div>
               </div>
 
@@ -57,7 +57,7 @@ export default function Story() {
                   <span className="material-symbols-outlined text-[22px]">favorite</span>
                 </div>
                 <p className="text-xs text-[#5a4138] leading-relaxed">
-                  Setiap butir sistik, kremes, dan keripik kami racik dengan ketelitian dan sentuhan kasih dari dapur keluarga.
+                  Kami mengolah ubi jalar dan aneka camilan dengan cermat dari dapur rumahan untuk menemani waktu santai Anda.
                 </p>
               </div>
             </div>
@@ -67,19 +67,19 @@ export default function Story() {
           <div className="lg:col-span-7 space-y-6">
             <div>
               <p className="text-xs sm:text-sm font-bold tracking-wider uppercase text-[#a33900]">
-                Kisah &amp; Filosofi Dapur
+                Tentang Usaha Kami
               </p>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1e1b19] tracking-tight mt-1 leading-tight">
-                Dari Resep Dapur Keluarga, Terjaga Hingga ke Tangan Anda
+                Usaha Rumahan Olahan Ubi Jalar &amp; Camilan Sederhana
               </h2>
             </div>
 
             <div className="space-y-3 text-xs sm:text-sm text-[#5a4138] leading-relaxed">
               <p>
-                Berawal dari kegemaran keluarga berkumpul menikmati kudapan sore hari, <strong>Aneka Kue Rahayu</strong> lahir dengan satu niat sederhana: menghadirkan kembali sensasi renyah dan gurihnya camilan tradisional olahan ubi pilihan yang asli dan bersih.
+                <strong>Aneka Kue Rahayu</strong> adalah usaha mikro rumahan (UMKM) yang berawal dari kesukaan membuat kudapan keluarga, kini menghadirkan aneka olahan ubi jalar dan camilan renyah seperti kremes ubi manis, keripik ubi, sistik, makaroni, dan jajanan gurih lainnya.
               </p>
               <p>
-                Di tengah maraknya camilan berpengawet, kami memilih tetap setia pada cara tradisional—memilih bahan ubi segar terbaik, mengolah adonan tangan segar setiap pagi, serta menggoreng dengan minyak bermerk yang selalu baru.
+                Tanpa bahan pengawet dan tanpa klaim yang berlebihan, kami mengutamakan pemilihan ubi jalar segar yang bagus, proses penggorengan yang bersih dengan minyak bermerk, serta kemasan yang rapat agar camilan tetap renyah dan nikmat saat sampai di tangan Anda.
               </p>
             </div>
 

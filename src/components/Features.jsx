@@ -9,22 +9,22 @@ export default function Features() {
       icon: "spa",
       iconBg: "bg-[#ffdbce]",
       iconColor: "text-[#a33900]",
-      title: "Bahan Alami & Halal",
-      description: "Tanpa bahan pengawet kimiawi dan tanpa pewarna sintetik. Kami menggunakan minyak goreng kemasan bermerk yang rutin diganti fresh setiap penggorengan."
+      title: "Bahan Alami & Bersih",
+      description: "Tanpa bahan pengawet kimiawi. Kami mengolah ubi jalar segar dan menggorengnya memakai minyak nabati kemasan bermerk yang rutin diganti."
     },
     {
       icon: "shield",
       iconBg: "bg-[#ffdf9f]",
       iconColor: "text-[#795900]",
-      title: "Packing Rapi & Aman",
-      description: "Menggunakan plastik tebal dengan double seal rapat kedap udara. Pengiriman luar kota dilengkapi kardus tebal dan ekstra bubble wrap anti remuk gratis."
+      title: "Kemasan Rapat & Aman",
+      description: "Dikemas memakai plastik tebal tersegel rapat agar tetap renyah. Pengiriman luar kota dipacking rapi memakai kardus dan bubble wrap."
     },
     {
-      icon: "rocket_launch",
+      icon: "shopping_bag",
       iconBg: "bg-[#ffdbd0]",
       iconColor: "text-[#984225]",
-      title: "Layanan Cepat & Fleksibel",
-      description: "Melayani pembelian harian eceran per 250 gram hingga pemesanan partai besar/grosir untuk arisan, hajatan keluarga, pengajian, dan paket hampers besek."
+      title: "Melayani Eceran & Partai",
+      description: "Bisa pesan mulai kemasan eceran untuk santai di rumah, hingga pesanan dalam jumlah banyak untuk arisan, pengajian, hajatan, dan oleh-oleh."
     }
   ];
 
@@ -41,13 +41,13 @@ export default function Features() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12 space-y-2">
           <p className="text-xs sm:text-sm font-bold tracking-wider uppercase text-[#a33900]">
-            Kualitas Dapur Warisan
+            Keunggulan Produk
           </p>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1e1b19]">
-            Mengapa Camilan Kami Selalu Dicari?
+            Kenapa Memilih Camilan Rahayu?
           </h2>
           <p className="text-xs sm:text-sm text-[#5a4138]">
-            Dedikasi kami menjaga standar cita rasa dan kerenyahan agar selalu tiba di tangan Anda seperti baru saja matang.
+            Olahan rumahan sederhana yang dibuat dengan bahan ubi jalar pilihan, proses bersih, dan kerenyahan yang pas.
           </p>
         </div>
 

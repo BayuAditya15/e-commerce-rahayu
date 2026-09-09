@@ -59,7 +59,7 @@ export default function ProductCatalog() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <p className="text-xs sm:text-sm font-bold tracking-wider uppercase text-[#a33900]">
-              Koleksi Kudapan Nusantara
+              Pilihan Olahan Ubi &amp; Camilan
             </p>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1e1b19] mt-1">
               Daftar Menu Camilan Renyah

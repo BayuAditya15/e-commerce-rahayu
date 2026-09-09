@@ -49,17 +49,17 @@ export default function Hero() {
           {/* Top Tagline Header */}
           <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#ffdbce]">
             <span className="material-symbols-outlined text-[18px] text-[#ffb599] fill">verified</span>
-            <span>100% Homemade • Resep Otentik Dapur Nusantara</span>
+            <span>100% Olahan Rumahan • Olahan Ubi Jalar &amp; Camilan Renyah</span>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.18]">
-            Nostalgia Rasa Ruang Tengah
+            Olahan Ubi Jalar &amp; Camilan Renyah
           </h1>
 
           {/* Description */}
           <p className="text-sm sm:text-base text-[#f4ece8] leading-relaxed max-w-xl">
-            Kriuk autentik teman ngeteh dan ngopi paling pas. Dibuat dengan resep warisan, digoreng segar setiap pagi dengan minyak nabati berkualitas, dan dikemas kedap udara anti-remuk.
+            Camilan renyah teman santai, ngeteh, dan ngopi sehari-hari. Dibuat dari olahan ubi jalar pilihan dan aneka jajanan gurih manis, digoreng bersih dengan minyak berkualitas dan dikemas rapat agar tetap renyah.
           </p>
 
           {/* Action CTAs */}

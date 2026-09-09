@@ -30,7 +30,7 @@ export default function Footer() {
               <span className="text-lg font-bold text-[#a33900]">Aneka Kue Rahayu</span>
             </div>
             <p className="text-xs sm:text-sm text-[#5a4138] leading-relaxed">
-              Melestarikan kehangatan cita rasa autentik Nusantara melalui jajanan pasar dan camilan renyah buatan tangan, diproduksi segar setiap subuh tanpa bahan pengawet.
+              Usaha mikro rumahan (UMKM) penyedia olahan ubi jalar manis dan aneka camilan renyah khas Cirebon. Dibuat bersih dan segar setiap hari tanpa bahan pengawet.
             </p>
             <div className="flex items-center gap-2 text-xs text-[#5a4138]">
               <span className="material-symbols-outlined text-[#a33900] text-[18px]">store</span>
@@ -44,7 +44,7 @@ export default function Footer() {
               Layanan Pengiriman
             </h3>
             <p className="text-xs sm:text-sm text-[#5a4138]">
-              Snack dikemas aman menggunakan kemasan tebal kedap udara, besek bambu, dan bubble wrap ekstra.
+              Snack dikemas aman menggunakan kemasan tebal tersegel rapat, kardus, dan bubble wrap ekstra untuk luar kota.
             </p>
             <div className="flex flex-wrap gap-1.5 pt-1">
               {deliveryBadges.map((badge, idx) => (
